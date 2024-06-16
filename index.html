@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constructora Chile - Manejo de Personal</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<!-- Menú Principal -->
+<header class="bg-light py-3 text-center">
+    <img src="images/logo.jpg" alt="Logo de Constructora Chile" class="logo">
+    <br> </br>
+    <h1>Constructora Chile</h1>
+</header>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Inicio</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#proposito">Propósito</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#usuarios">Usuarios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#registro">Registro</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Sección Propósito -->
+<section id="proposito" class="container my-5">
+    <h2 class="text-center">Propósito de la Página</h2>
+    <p>Bienvenido a la plataforma de gestión de personal de Constructora Chile. Esta página tiene como objetivo centralizar el registro y gestión de todos los colaboradores de nuestra empresa dedicada al sector de la construcción. Aquí podrás registrar nuevos empleados, actualizar información existente y mantener un seguimiento organizado del personal activo.</p>
+
+    <p> Nuestro compromiso es proporcionar una herramienta eficiente y segura para facilitar la administración de recursos humanos, asegurando que cada miembro del equipo esté correctamente registrado con sus datos personales, detalles de contacto, información laboral y fechas importantes como la fecha de ingreso.</p>
+
+    <p> Esta plataforma no solo simplifica los procesos administrativos internos, sino que también mejora la transparencia y la comunicación dentro de nuestra organización. A través de este portal, esperamos fortalecer nuestra capacidad para gestionar eficazmente el talento humano y apoyar el crecimiento continuo de Constructora Chile.</p>
+</section>
+
+<!-- Listado de Usuarios -->
+<section id="usuarios" class="container my-5">
+    <h2 class="text-center">Listado de Usuarios</h2>
+    <div class="cold-md-3" id="userList">
+        <!-- Usuarios agregados aparecerán aquí -->
+    </div>
+</section>
+
+<!-- Formulario de Registro -->
+<section id="registro" class="container my-5">
+    <h2 class="text-center">Registro de Usuarios</h2>
+    <br> </br>
+    <form id="userForm" class="row g-3">
+        <div class="col-md-6">
+            <label for="nombre" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="nombre" required>
+        </div>
+        <div class="col-md-6">
+            <label for="apellido" class="form-label">Apellido</label>
+            <input type="text" class="form-control" id="apellido" required>
+        </div>
+        <div class="col-md-6">
+            <label for="fechaNacimiento" class="form-label">Fecha de Nacimiento</label>
+            <input type="date" class="form-control" id="fechaNacimiento" required>
+        </div>
+        <div class="col-md-6">
+            <label for="email" class="form-label">Correo Electrónico</label>
+            <input type="email" class="form-control" id="email" required>
+        </div>
+        <div class="col-md-6">
+            <label for="cargo" class="form-label">Cargo</label>
+            <select class="form-select" id="cargo" required>
+                <option selected disabled value="">Seleccione...</option>
+                <option value="Ingeniero">Ingeniero</option>
+                <option value="Arquitecto">Arquitecto</option>
+                <option value="Obrero">Obrero</option>
+                <option value="Administrador">Administrador</option>
+            </select>
+        </div>
+        <div class="col-md-6">
+            <label for="fechaIngreso" class="form-label">Fecha de Ingreso</label>
+            <input type="date" class="form-control" id="fechaIngreso" required>
+        </div>
+        <div class="col-12 text-center">
+            <button type="submit" class="btn btn-primary">Agregar Usuario</button>
+        </div>
+    </form>
+</section>
+
+<!-- Modal de Confirmación -->
+<div class="modal fade" id="confirmModal" tabindex="-1" aria-labelledby="confirmModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="confirmModalLabel">Confirmación de Usuario</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Datos de confirmación del usuario -->
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-primary" id="confirmBtn">Confirmar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
