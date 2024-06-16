@@ -1,7 +1,7 @@
 /* styles.css */
 
 body {
-    background-image: url('images/fondo.jpg');
+    background-image: url('fondo.jpg');
     background-size: cover;
     background-attachment: fixed;
     color: #333;
